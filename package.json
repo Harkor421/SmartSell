@@ -1,0 +1,20 @@
+{
+  "name": "smart-sell",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MC-armed buy-reactive sell engine for pump.fun / pump-swap tokens",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@pump-fun/pump-sdk": "1.33.0",
+    "@pump-fun/pump-swap-sdk": "^1.14.1",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.98.0",
+    "bn.js": "^5.2.1",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.7",
+    "ws": "^8.20.0"
+  }
+}
