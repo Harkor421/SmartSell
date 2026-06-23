@@ -30,7 +30,7 @@ import {
 
 dotenv.config();
 
-const PORT = parseInt(process.env.PORT) || 4099;
+const PORT = parseInt(process.env.PORT) || 43903;
 const RPC_URL = process.env.RPC_URL;
 const PUMPPORTAL_API_KEY = process.env.PUMPPORTAL_API_KEY;
 
@@ -49,7 +49,7 @@ const wss = new WebSocketServer({
     const remote = info.req.socket.remoteAddress || '';
     const isLoopback = remote === '127.0.0.1' || remote === '::1' || remote === '::ffff:127.0.0.1';
     if (!isLoopback) return cb(false, 403, 'Forbidden');
-    const allowed = new Set(['http://localhost:5180', 'http://127.0.0.1:5180', '', 'null']);
+    const allowed = new Set(['http://localhost:43900', 'http://127.0.0.1:43900', 'http://localhost:5180', 'http://127.0.0.1:5180', '', 'null']);
     const origin = info.origin || '';
     if (!allowed.has(origin)) return cb(false, 403, 'Forbidden');
     cb(true);
